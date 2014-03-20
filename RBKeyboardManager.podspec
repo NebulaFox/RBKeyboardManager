@@ -19,6 +19,6 @@ Pod::Spec.new do |spec|
 
   spec.platform         = :ios, '6.0'
   spec.source           = { :git => "https://github.com/NebulaFox/RBKeyboardManager.git" }
-  spec.source_files     = 'RBKeyboardManager/*.{h,m}', 'RBKeyboardManager/**/*.{h,m}'
+  spec.source_files     = 'RBKeyboardManager/*.{h,m}', 'DMFormInputAccessoryView/*.{h,m}'
   spec.requires_arc     = true
 end

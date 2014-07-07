@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name              = "RBKeyboardManager"
-  spec.version           = "0.1.0"
+  spec.version           = "0.5.0"
   spec.summary           = "A keyboard manager designed to be sensible"
   spec.description       = <<-DESC
                             `RBKeyboardManager` is designed to be used with one scroll view.
@@ -11,10 +11,10 @@ Pod::Spec.new do |spec|
                             The only thing you really need to do is give `RBKeyboardManager` is a `UIScrollView` and
                             an array of `UITextField`s and `UITexView`s, and `RBKeyboardManager` will do the rest.
                             DESC
-  spec.license          = 'NCSA'
+  spec.license          = { :type => 'NCSA', :license => 'LICENSE.md' }
   spec.homepage         = "https://github.com/NebulaFox/RBKeyboardManager"
 
-  spec.author           = { "Robbie Bykowski" => "robbie.bykowski@gmail.com" }
+  spec.author           = { "Robbie Bykowski" => "robbie.bykowski@heliumend.co.uk" }
   spec.social_media_url = "http://twitter.com/NebulaFox"
 
   spec.platform         = :ios, '6.0'

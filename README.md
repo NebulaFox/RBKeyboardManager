@@ -16,8 +16,7 @@ Features:
 * The done button will close the keyboard.
 * Allows you to define a return key behaviour.
 
-Currently, it has only been tested to work in portrait orientation.
-
+Works in portrait and landscape.
 
 ## Installing
 
@@ -26,7 +25,7 @@ Currently, it has only been tested to work in portrait orientation.
 Since `RBKeyboardManager` is still under testing and the fact I am really lazy,
 you cannot just add it to the pod file like so
 
-    pod 'RBKeyboardManager', '~> 0.1.0'
+    pod 'RBKeyboardManager', '~> 0.5.0'
     
 instead, you have to
 
@@ -85,16 +84,13 @@ _TODO_ : Mention delegate
 
     - (UIReturnKeyType)returnKeyTypeForTextField:(UITextField *)textField
     {
-        if ( textField == self.loginEmailField )
+        UIReturnKeyType key = UIReturnKeyNext;
+        if ( textField == self.loginPasswordField )
         {
-            return UIReturnKeyNext;
-        }
-        else if ( textField == self.loginPasswordField )
-        {
-            return UIReturnKeyGo;
+            return UIReturnKeyDONE;
         }
     
-        return UIReturnKeyDefault;
+        return key;
     }
 
     - (BOOL)keyboardManager:(RBKeyboardManager *)keyboardManager shouldReturnForTextField:(UITextField *)textField

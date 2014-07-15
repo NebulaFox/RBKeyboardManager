@@ -124,6 +124,11 @@ typedef NS_ENUM( NSUInteger, ForceBehaviour )
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
+    if (self.activeView == nil)
+    {
+        return;
+    }
+
     NSDictionary * info = [notification userInfo];
     CGSize kbSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
     CGFloat kbHeight = MIN(kbSize.width, kbSize.height) + self.inputAccessoryView.frame.size.height;
@@ -169,6 +174,7 @@ typedef NS_ENUM( NSUInteger, ForceBehaviour )
         textField.returnKeyType = [self.delegate returnKeyTypeForTextField:textField];
     }
     
+
     [self _updateActiveViewWithView:textField];
 }
 
